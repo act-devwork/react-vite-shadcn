@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Livechat Features"
+  short_description: "Deliver complete features across livechat layers"
+  default_prompt: "Use $build-livechat-feature to implement an end-to-end feature that follows this repository's architecture."

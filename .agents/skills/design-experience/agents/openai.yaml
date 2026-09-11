@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Experience"
+  short_description: "Design accessible, consistent experiences"
+  default_prompt: "Use $design-experience to implement a responsive, accessible UI change that matches this repository."

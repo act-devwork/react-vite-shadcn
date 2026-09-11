@@ -1,3 +1,55 @@
-dist
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Production
+dist
+build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+.env
+
+# Vercel
+.vercel
+
+# Typescript
+*.tsbuildinfo
+
+# Editor
+.vscode
+.idea
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Package manager lock files
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Public static files (optional - uncomment if needed)
+# public
+
+# Cache
+.cache
+
+# GitHub
+.github
+
+# Docker
+Dockerfile
+nginx.conf
