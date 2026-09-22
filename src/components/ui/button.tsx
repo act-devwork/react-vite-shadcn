@@ -65,7 +65,7 @@ function Button({
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
     >
-      {loading ? <LoadingSpinner size={16} /> : icon ? <>{icon}</> : null}
+      {loading ? <LoadingSpinner/> : icon ? <>{icon}</> : null}
       {props.children}
     </ButtonPrimitive>
   );
