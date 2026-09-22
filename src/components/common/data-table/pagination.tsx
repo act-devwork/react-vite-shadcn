@@ -33,19 +33,19 @@ export function DataTablePagination<TData extends RowData>({
   return (
     <div
       className={cn(
-        'flex flex-col gap-4 py-4 bg-background/50',
+        'flex flex-col items-center gap-4 pt-4',
         'md:flex-row md:items-center md:justify-between',
         className,
       )}
     >
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
-        <Button className="!h-9 hover:bg-transparent cursor-default w-fit" variant="outline">
+        <Button className="h-9! hover:bg-transparent cursor-default w-fit" variant="outline">
           <FileText className="h-3 w-3" />
           Total: {totalItems.toLocaleString()} items
         </Button>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+      <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4">
         {showPageSize && (
           <div className="flex items-center gap-2.5">
             <label className="text-sm text-muted-foreground whitespace-nowrap">Page size</label>
@@ -81,15 +81,15 @@ export function DataTablePagination<TData extends RowData>({
             <span className="font-medium tabular-nums">{totalPages}</span>
           </div>
 
-          <div className="flex items-center gap-0.5 rounded-md border bg-background p-0.5">
+          <div className="flex items-center gap-0.5 rounded-md border bg-secondary p-0.5">
             <Button
               variant="ghost"
               size="sm"
-              className="h-8 w-8 p-0 hover:bg-muted"
+              className="h-8 w-8 p-0 hover:bg-accent"
               onClick={() => table.firstPage()}
               disabled={!table.getCanPreviousPage()}
             >
-              <ChevronsLeft className="h-4 w-4" />
+              <ChevronsLeft className="size-5" />
               <span className="sr-only">First page</span>
             </Button>
             <Button
@@ -99,7 +99,7 @@ export function DataTablePagination<TData extends RowData>({
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="size-5" />
               <span className="sr-only">Previous page</span>
             </Button>
             <Button
@@ -109,7 +109,7 @@ export function DataTablePagination<TData extends RowData>({
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="size-5" />
               <span className="sr-only">Next page</span>
             </Button>
             <Button
@@ -119,7 +119,7 @@ export function DataTablePagination<TData extends RowData>({
               onClick={() => table.lastPage()}
               disabled={!table.getCanLastPage()}
             >
-              <ChevronsRight className="h-4 w-4" />
+              <ChevronsRight className="size-5" />
               <span className="sr-only">Last page</span>
             </Button>
           </div>

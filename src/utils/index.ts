@@ -118,3 +118,12 @@ export const isValidUrl = (value: string): boolean => {
 export function normalizeTiptapHtml(htmlBody: string): string {
   return htmlBody.replace(/(<p\b[^>]*>)\s*<\/p>/gi, '$1<br></p>');
 }
+
+export function getErrorMessage(error: unknown, errorMessage?: string) {
+  if (typeof error === 'object' && error !== null && 'message' in error) {
+    const message = error.message;
+    if (typeof message === 'string' && message.trim()) return message;
+  }
+
+  return errorMessage ?? 'Failed';
+}
